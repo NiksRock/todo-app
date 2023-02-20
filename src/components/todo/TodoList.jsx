@@ -4,8 +4,10 @@ const TodoList = (props) => {
   var [todoList, setTodoList] = useState({});
   useEffect(() => {
     db.child("todolist").on("value", (snapshot) => {
-      if (snapshot.val()) setTodoList({ ...snapshot.val() });
-      else setTodoList({});
+      if (snapshot.val()) {
+        console.log(snapshot.val());
+        setTodoList({ ...snapshot.val() });
+      } else setTodoList({});
     });
   }, []);
   const onDelete = (key) => {

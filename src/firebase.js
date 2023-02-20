@@ -7,7 +7,7 @@ var firebaseConfig = {
   storageBucket: "todoapp-7f801.appspot.com",
   messagingSenderId: "845900549540",
   appId: "1:845900549540:web:ff16e4496ec37cad38c531",
-  measurementId: "G-5RWCWJ9TM4",
+  measurementId: "G-5RWCWJ9TM4"
 };
 // Initialize Firebase
 var db = firebase.initializeApp(firebaseConfig);
