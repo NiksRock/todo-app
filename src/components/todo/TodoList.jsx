@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import db from "./../../firebase";
 const TodoList = (props) => {
   var [todoList, setTodoList] = useState({});
