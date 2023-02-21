@@ -28,7 +28,7 @@ const AddEditTodoForm = (props) => {
       <div className="card-body">
         <form autoComplete="false">
           <div className="form-row align-items-center">
-            <div class="form-group">
+            <div className="form-group">
               <div className="input-group mb-2 mr-sm-2">
                 <div className="input-group-prepend">
                   <div className="input-group-text">Name</div>
@@ -43,7 +43,7 @@ const AddEditTodoForm = (props) => {
                 />
               </div>
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <div className="input-group mb-2 mr-sm-2">
                 <div className="input-group-prepend">
                   <div className="input-group-text">Todo Title</div>
@@ -58,17 +58,19 @@ const AddEditTodoForm = (props) => {
                 />
               </div>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Todo Description</label>
+            <div className="form-group">
+              <label htmlFor="exampleFormControlTextarea1">
+                Todo Description
+              </label>
               <textarea
-                class="form-control"
+                className="form-control"
                 name="todoDescription"
                 onChange={handelOnChange}
                 value={userInfo.todoDescription}
                 rows="3"
               ></textarea>
             </div>
-            <div class="form-group ">
+            <div className="form-group ">
               <div className="input-group mt-2 mb-2 mr-sm-2">
                 <div className="input-group-prepend">
                   <div className="input-group-text">Complete before</div>
@@ -88,7 +90,7 @@ const AddEditTodoForm = (props) => {
               <div className="col-md-6">
                 <button
                   type="button"
-                  class="btn btn-success "
+                  className="btn btn-success "
                   onClick={handelFormSubmit}
                 >
                   {props.todo ? "Update" : "Save"}
@@ -98,7 +100,7 @@ const AddEditTodoForm = (props) => {
                 <div className="col-md-6">
                   <button
                     type="button"
-                    class="btn btn-info "
+                    className="btn btn-info "
                     onClick={props.clearData}
                   >
                     Add New

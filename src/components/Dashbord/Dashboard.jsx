@@ -15,8 +15,8 @@ const Home = () => {
     setSelectedTodo(null);
   };
   return (
-    <div class="container">
-      <div class="jumbotron">
+    <div className="container">
+      <div className="jumbotron">
         <h1>Todo APP</h1>
       </div>
       <div className="card ">
