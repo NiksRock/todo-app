@@ -18,17 +18,24 @@ const TodoList = (props) => {
         return (
           <li className="list-group-item" id={obj}>
             <div className="row">
-              <div className="col-md-10"> {todoList[obj].personName} </div>
-              <div className="col-md-1">
-                <i
-                  className="far fa-trash-alt text-danger"
-                  onClick={() => onDelete(obj)}
-                ></i>{" "}
+              <div className="col-md-10 ">
+                <div className="todo-title">
+                  <span className="badge badge-warning tag-todo">{todoList[obj].todoTitle} </span> 
+                  <span className="badge badge-warning todo-owner">{todoList[obj].personName} </span>
+                </div>
+                <div className="todo-des ">&nbsp;{todoList[obj].todoDescription}</div>
               </div>
               <div className="col-md-1">
-                {" "}
+                <i
+                  role="button"
+                  className="far fa-trash-alt text-danger"
+                  onClick={() => onDelete(obj)}
+                ></i>
+              </div>
+              <div className="col-md-1">
                 <i
                   class="fas fa-edit text-primary"
+                  role="button"
                   onClick={(e) => {
                     e.preventDefault();
                     props.updateTodo(todoList[obj], obj);

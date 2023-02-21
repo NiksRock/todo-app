@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+.todo-des{  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+}
+.todo-title{
+  justify-content: space-between;
+  display: flex;
+}
+.tag-todo{  
+  background: #00eeff5e;
+  color: #6f63d1;
+}
+.todo-owner{
+  background: #ffd7005e;
+  color: green;
+}
