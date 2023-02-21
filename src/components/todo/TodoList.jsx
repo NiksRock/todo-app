@@ -5,7 +5,6 @@ const TodoList = (props) => {
   useEffect(() => {
     db.child("todolist").on("value", (snapshot) => {
       if (snapshot.val()) {
-        console.log(snapshot.val());
         setTodoList({ ...snapshot.val() });
       } else setTodoList({});
     });
